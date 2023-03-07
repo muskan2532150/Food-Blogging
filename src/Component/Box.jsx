@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Box = () => {
+const Box = ({value,onclick}) => {
   return (
-    <div>Box</div>
+    <button onclick={()=>onclick}>{value}</button>
   )
 }
 
