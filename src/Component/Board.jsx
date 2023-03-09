@@ -48,12 +48,32 @@ const Board = () => {
        setXplayer(!xplayer);
     }
 
-    return (
-        <div>
+    return (<section>
+        <h1>Tic Tock Game</h1>
+       <div>
+       <div>
             {board.map((value, index) => {
                 return <Box value={value} onclick={() => { value === null && onclickhandle(index) }} key={index} />
             })}
         </div>
+      <div>
+      <div>
+         <h4>Players</h4>
+         <ul>
+            <li>Palyer 1 : X</li>
+            <li>Player 2 : Y</li>
+         </ul>
+        </div>
+        <div>
+            <h4>Scores</h4>
+            <ul>
+                <li>{scores.xscore}</li>
+                <li>{scores.yscore}</li>
+            </ul>
+        </div>
+      </div>
+       </div>
+        </section>
     )
 }
 
