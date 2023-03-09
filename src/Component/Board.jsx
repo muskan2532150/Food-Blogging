@@ -17,13 +17,11 @@ const Board = () => {
     ]
 
    const checkWinner = (updatedBoard) =>{
-    console.log(board);
     for(let i=0;i<WINNER_cond.length;i++)
     {
         const [a,b,c] = WINNER_cond[i];
         if(updatedBoard[a] && updatedBoard[a]===updatedBoard[b] && updatedBoard[b] === updatedBoard[c] && updatedBoard[c])
         {
-            console.log('1',updatedBoard[a])
         return updatedBoard[a]; 
         }
     }
@@ -42,9 +40,9 @@ const Board = () => {
        const winner = checkWinner(updatedBoard);
        if(winner){
           if(winner === 'X')
-          setScores(...scores,scores.xscore+1)
+          setScores({...scores,xscore:scores.xscore++})
           else
-          setScores(...scores,scores.yscore+1)
+          setScores({...scores,yscore:scores.yscore++})
        }
        else 
        setXplayer(!xplayer);
