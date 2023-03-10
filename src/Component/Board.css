@@ -1,0 +1,19 @@
+ul{
+    list-style-type: none;
+}
+
+.d-flex{
+    display: flex;
+}
+
+.main {
+    display: flex;
+}
+
+.board{
+    display: flex;
+}
+
+.scoreboard{
+    display: flex;
+}

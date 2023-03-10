@@ -48,15 +48,16 @@ const Board = () => {
        setXplayer(!xplayer);
     }
 
-    return (<section>
+    return (
+    <section>
         <h1>Tic Tock Game</h1>
-       <div>
-       <div>
+       <div className='main'>
+       <div className='board'>
             {board.map((value, index) => {
                 return <Box value={value} onclick={() => { value === null && onclickhandle(index) }} key={index} />
             })}
         </div>
-      <div>
+      <div className='scoreboard'>
       <div>
          <h4>Players</h4>
          <ul>
